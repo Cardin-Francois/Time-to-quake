@@ -112,23 +112,6 @@ template = """
   <title>Carte temps réel</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
-  <script>
-  $( function() {
-    $( "#maplegend" ).draggable({
-                    start: function (event, ui) {
-                        $(this).css({
-                            right: "auto",
-                            top: "auto",
-                            bottom: "auto"
-                        });
-                    }
-                });
-});
-
-  </script>
 </head>
 <body>
 
@@ -142,19 +125,19 @@ template = """
   <ul class='legend-labels'>
     <table id = "tab">
     <tr>
-      <th><p id = "caca">Magitude < 2 </p></th>
+      <th><p>Magitude < 2 </p></th>
       <th><div id="moncercle1"></div></th>
     </tr>
     <tr>
-      <th><p id = "caca">Magitude entre 2 et 4 </p></th>
+      <th><p>Magitude entre 2 et 4 </p></th>
       <th><div id="moncercle2"></div></th>
     </tr>
     <tr>
-      <th><p id = "caca">Magitude entre 4 et 6 </p></th>
+      <th><p>Magitude entre 4 et 6 </p></th>
       <th><div id="moncercle3"></div></th>
     </tr>
     <tr>
-      <th><p id = "caca">Magitude > 6 </p></th>
+      <th><p>Magitude > 6 </p></th>
       <th><div id="moncercle4"></div></th>
     </tr>
 
