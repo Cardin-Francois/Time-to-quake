@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+H1 { text-align: center;
+    font-size: 70px;
+    margin-top: 60px
+   }
+a {text-decoration: none;
+  color: red;
+  font-size: 20px;
+  line-height: 1.5;
+  }
+H2 { font-size: 30px;
+   line-height: 0.5; }
+body {
+color:White;
+background-color:black;
+background-image:url(images/Terre\ 3D.jpg);
+background-size: cover;
+background-position: 50% 50%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+text-align: center;
+}
+a:hover{color:purple}
