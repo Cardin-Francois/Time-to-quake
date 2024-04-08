@@ -2,9 +2,9 @@
 // Vérifie si la variable est bien envoyée 
 if(isset($_POST['variable'])) {
     // Récupère la variable envoyée par JavaScript
-    $a = $_POST['variable']; 
+    $a = $_POST['variable'];
     // une commande qui execute le script python
-    exec("python carte_jour.py $a", $variable);
+    exec("python3 /var/www/html/carte_jour.py $a");
     // Termine l'exécution du script PHP
     exit(); 
 }
@@ -38,25 +38,33 @@ if(isset($_POST['variable'])) {
   <H2>Autres :</H2>
   <a href="quizz.html">Quizz </a><br>
   <a href="statistiques.html">Statistiques</a>
-  <script>
-      function envoyerVariable() {
-          // Définit la variable JavaScript
-          var maVariable = prompt("Rentrez une date sous cette forme","2008-07-26");
-          // Envoie la variable à PHP via AJAX
-          $.ajax({
-              url: '<?php echo $_SERVER['PHP_SELF']; ?>', // URL du script actuel
-              type: 'POST',
-              data: { variable: maVariable },
-              success: function(response) {
-                  // Affiche la réponse de PHP dans la console du navigateur
-                  console.log('Réponse de PHP : ' + response);
-              }
-          });
-      <!--
-      window.location.replace("carte.html");
-      -->
-        }
-    
-  </script>
+<script>
+    function envoyerVariable() {
+        // Afficher le message de chargement
+        document.getElementById("loading-message").style.display = "block";
+
+        // Définit la variable JavaScript
+        var maVariable = prompt("Rentrez une date sous cette forme","2008-07-26");
+        // Envoie la variable à PHP via AJAX
+        $.ajax({
+            url: '<?php echo $_SERVER['PHP_SELF']; ?>', // URL du script actuel
+            type: 'POST',
+            data: { variable: maVariable },
+            success: function(response) {
+                // Affiche la réponse de PHP dans la console du navigateur
+                console.log('Réponse de PHP : ' + response);
+            }
+        });
+
+        // Rediriger vers la page carte.html après 5 secondes
+        setTimeout(function() {
+            window.location.replace("carte-jour.html");
+        }, 2000); // 5000 millisecondes = 5 secondes
+    }
+</script>
+
+<!-- Afficher le message de chargement -->
+<div id="loading-message" style="display: none;">Chargement en cours...</div>
+
 </body>
 </html>
