@@ -38,6 +38,9 @@ if(isset($_POST['variable'])) {
   <H2>Autres :</H2>
   <a href="quizz.html">Quizz </a><br>
   <a href="statistiques.html">Statistiques</a>
+    <H2>Répertoire github :</H2>
+  <a href='https://github.com/Cardin-Francois/Time-to-quake' target="_blank" > <img src= 'images/telecharger.png' width='100' height='100'></a>
+  
 <script>
     function envoyerVariable() {
         // Afficher le message de chargement
