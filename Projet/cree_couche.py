@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+#Le projet n'utulise plus ce programme
+
 import datetime#permet de manipuler les dates et les heures
 import folium#Folium est une des nombreuses bibliothèques open source complémentaires de Python.C'est un puissant outil car il rend possible la conception de cartes interactives.
 
