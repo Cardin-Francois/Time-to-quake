@@ -62,7 +62,7 @@ if(isset($_POST['variable'])) {
         // Rediriger vers la page carte.html après 5 secondes
         setTimeout(function() {
             window.location.replace("carte-jour.html");
-        }, 2000); // 5000 millisecondes = 5 secondes
+        }, 5000); // 5000 millisecondes = 5 secondes
     }
 </script>
 
