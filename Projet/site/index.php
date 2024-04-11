@@ -18,7 +18,6 @@ if(isset($_POST['variable'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="Time to Quake ! est le site qui répétorie tout les tremblements du monde en temps réel et historique. Le site présente de la documentation et un quizz !"/>
-  <meta name="google-site-verification" content="HZIIzMEuHZb--5cwvp6iQH_PAUP8t1Eg5WL0TNvbfFc" />
   <title>Accueil</title>
   <link href="style_hub.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="images/icone.png"/>
