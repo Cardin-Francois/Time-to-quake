@@ -271,7 +271,7 @@ function checkForAnswer() {
 
     options.forEach((option) => {
         if (option.value === currentQuestionAnswer) {
-            //get's correct's radio input with correct answer
+            
             correctOption = option.labels[0].id
         }
     })
@@ -362,7 +362,7 @@ function handleEndGame() {
     }
     const playerGrade = (playerScore / 10) * 100
 
-    //data to display to score board
+    
     document.getElementById('remarks').innerHTML = remark
     document.getElementById('remarks').style.color = remarkColor
     document.getElementById('grade-percentage').innerHTML = playerGrade
