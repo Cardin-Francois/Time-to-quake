@@ -3,7 +3,7 @@
 if(isset($_POST['variable'])) {
     // Récupère la variable envoyée par JavaScript
     $a = $_POST['variable'];
-    // une commande qui execute le script python
+    // une commande qui execute le script python, avec le chemin du script
     exec("python3 /var/www/html/carte_jour.py $a");
     // Termine l'exécution du script PHP
     exit(); 
