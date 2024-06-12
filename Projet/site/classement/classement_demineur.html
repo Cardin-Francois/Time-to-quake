@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classements des Scores du Démineur</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="/images/icone.png"/>
+</head>
+<body>
+<h1 class="title" id="tete"><a href="/index.php">Time To Quake !</a></h1>
+
+<div class="dropdown">
+  <button class="dropbtn">Les Cartes</button>
+  <div class="dropdown-content">
+    <a href="/carte-en-temps-réel.html">Carte en Temps Réel</a>
+    <a href="/carte-historique.html">Carte Historique</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Documentation</button>
+  <div class="dropdown-content">
+    <a href="/noyau-terre.html">Noyau de la Terre</a>
+    <a href="/Les-tremblements-de-terre.html">Les Outils Technologiques</a>
+    <a href="/Les-tremblements-de-terre-2.html">Les Tremblements de Terre</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Autres</button>
+  <div class="dropdown-content">
+    <a href="/quizz.html">Quizz</a>
+	<a href="/statistiques.html">Statistiques</a>
+	<a href="/simu/Simu.html">Simulation</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Jeux</button>
+  <div class="dropdown-content">
+     <a href="classement.html">Classement</a>
+	 <a href="/demineur.html">Démineur</a>
+	 <a href="/game/game.html">Jeux de Tir</a>
+  </div>
+</div>
+<div class="contenu">
+    <h1>Classements des Scores du Démineur</h1>
+    <div class="classement" id="classement-facile">
+        <h2>Facile</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Score (secondes)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="classement" id="classement-moyen">
+        <h2>Moyen</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Score (secondes)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="classement" id="classement-difficile">
+        <h2>Difficile</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Score (secondes)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+	</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/error404/scores.json')  // Mettez à jour l'URL ici
+                .then(response => response.json())
+                .then(data => {
+                    afficherClassements(data);
+                })
+                .catch(error => console.error('Erreur lors de la lecture du fichier JSON:', error));
+        });
+
+        function afficherClassements(data) {
+            const classements = {
+                facile: [],
+                moyen: [],
+                difficile: []
+            };
+
+            // Trier les scores par difficulté
+            data.forEach(score => {
+                if (score.difficulte === 'facile') {
+                    classements.facile.push(score);
+                } else if (score.difficulte === 'moyen') {
+                    classements.moyen.push(score);
+                } else if (score.difficulte === 'difficile') {
+                    classements.difficile.push(score);
+                }
+            });
+
+            // Trier les scores dans chaque difficulté par temps écoulé (ordre croissant)
+            for (const difficulte in classements) {
+                classements[difficulte].sort((a, b) => a.tempsEcoule - b.tempsEcoule);
+                afficherClassement(difficulte, classements[difficulte]);
+            }
+        }
+
+        function afficherClassement(difficulte, scores) {
+            const tbody = document.getElementById(`classement-${difficulte}`).querySelector('tbody');
+            tbody.innerHTML = '';
+            scores.forEach(score => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<td>${score.pseudo}</td><td>${score.tempsEcoule}</td>`;
+                tbody.appendChild(tr);
+            });
+        }
+		
+		
+    </script>
+</body>
+</html>

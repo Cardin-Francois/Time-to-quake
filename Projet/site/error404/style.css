@@ -1,0 +1,67 @@
+body {
+	margin: 0;
+}
+img {
+	position: absolute; 
+    top: 25%; 
+    left: 50%; 
+     
+    transform: translate(-50%, -50%); /* Centre la vidéo en utilisant une transformation de translation */
+}
+
+
+.contenu {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%); /*place le contenu et surtout les boutons au millieu*/
+}
+.contenu button {
+	margin: 5px;
+}
+
+
+
+#plateau { /*plateau du demineur*/
+  display: none;
+   position: absolute; /* Position absolue pour pouvoir utiliser les valeurs top et left */
+  top: 60%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  grid-template-columns: repeat(10, 30px); 
+  grid-template-rows: repeat(10, 30px);
+}
+
+.cellule { /*cellule du demineur*/
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: black; /* Toutes les cases sont noires au départ */
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    color: transparent; /* Le texte est transparent au départ */
+}
+
+.mine {
+    background-color: black;
+}
+
+.revelee {
+    background-color: green; /* Couleur pour les cases révélées */
+    color: white; 
+}
+
+.explosee {
+    background-color: red; /* Couleur pour les cases avec une bombe révélée */
+}
+.cellule.drapeau {
+    color: red; /* Exemple de style pour les drapeaux */
+}
+
+.score {
+	position: absolute;
+	bottom: 50%;
+	left: 20%;
+	font-family: Arial;
+}
