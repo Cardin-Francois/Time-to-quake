@@ -1,0 +1,224 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #DCDCDC;
+    color: #333;
+    padding: 20px;
+	text-align: center;
+	
+}
+
+html {
+    scroll-behavior: smooth; /*pour faire le défilement entre les liens pas directement mais de facon "smooth"*/
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+
+p {
+    margin-bottom: 20px;
+	text-align: justify;
+	max-width: 50%; 
+	margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Style for the title */
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title a {
+  text-decoration: none;
+  color:red; 
+  font-size: 44px; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+}
+
+.title a:hover{
+	text-decoration: underline;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  min-width: 160px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.conteneur {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  justify-content:center;
+}
+.contenu {
+  
+  width: 1000px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 1%;
+  align-items: center;
+}
+
+.question { /*style du quizz*/
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.question p h2{
+	
+	font-weight: bold;
+	max-width: 1000px; 
+}
+
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.fleche { /*fleche pour remonter a l'entete*/
+    position: fixed;
+    bottom: 20px;
+    left: 75%;
+    font-size: 24px;
+    background-color: #007bff;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none; 
+}
+
+.fleche:hover {
+    background-color: #0056b3;
+}
+
+#plateau { /*plateau du demineur*/
+  display: none;
+   position: absolute; /* Position absolue pour pouvoir utiliser les valeurs top et left */
+  top: 60%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  grid-template-columns: repeat(10, 30px); 
+  grid-template-rows: repeat(10, 30px);
+}
+
+.cellule { /*cellule du demineur*/
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: black; /* Toutes les cases sont noires au départ */
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    color: transparent; /* Le texte est transparent au départ */
+}
+
+.mine {
+    background-color: black;
+}
+
+.revelee {
+    background-color: green; /* Couleur pour les cases révélées */
+    color: white; 
+}
+
+.explosee {
+    background-color: red; /* Couleur pour les cases avec une bombe révélée */
+}
+.cellule.drapeau {
+    color: red; /* Exemple de style pour les drapeaux */
+}
+
+.score {
+	position: absolute;
+	bottom: 50%;
+	left: 20%;
+	font-family: Arial;
+}

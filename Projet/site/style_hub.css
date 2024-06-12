@@ -1,0 +1,106 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  color: white;
+  background-image: url(images/Terre.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+  margin-top: 60px;
+  color:red;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 0.5;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+a:hover {
+  color: purple;
+}
+
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 0 20%; /* Ajustez la largeur des cartes selon votre préférence */
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  background: #858585;
+  color: white;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-content {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 200px; /* Hauteur de l'image */
+      position: relative;
+    }
+
+    .card-content h2 {
+      position: absolute;
+      bottom:0; /* Ajustez la position verticale du titre */
+      left: 0;
+      right: 0;
+      color: white;
+      font-size: 20px;
+}
+   .card-content img {
+      width: 100%;
+      height: 165px;
+      
+      
+    }
+
+.github-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px; /* Ajoutez un peu de marge pour l'espacement */
+}
+.contenu {
+  color:black;
+  width: 1000px;
+  background-color: rgba(255,255,255,0.6);
+  padding: 30px;
+  border-radius: 1%;
+  align-items: center;
+
+}
+.conteneur {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  justify-content:center;
+  
+}

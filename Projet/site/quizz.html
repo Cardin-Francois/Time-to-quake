@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<hml>
+<head>
+    <title>Quizz</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Time to Quake ! est le site qui répétorie tout les tremblements du monde en temps réel et historique. Le site présente de la documentation des statistiques et un quizz !"/>
+	<link rel="shortcut icon" href="images/icone.png"/>
+    <link rel="stylesheet" type="text/css" href='style-quizz.css'>
+</head>
+<body >
+<h1 class="title"><a href="index.php">Time To Quake !</a></h1>
+
+<div class="dropdown">
+  <button class="dropbtn">Les Cartes</button>
+  <div class="dropdown-content">
+    <a href="carte-en-temps-réel.html">Carte en Temps Réel</a>
+    <a href="carte-historique.html">Carte Historique</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Documentation</button>
+  <div class="dropdown-content">
+    <a href="noyau-terre.html">Noyau de la Terre</a>
+    <a href="Les-tremblements-de-terre.html">Les Outils Technologiques</a>
+    <a href="Les-tremblements-de-terre-2.html">Les Tremblements de Terre</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Autres</button>
+  <div class="dropdown-content">
+    <a href="quizz.html">Quizz</a>
+	<a href="statistiques.html">Statistiques</a>
+	<a href="simu/Simu.html">Simulation</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Jeux</button>
+  <div class="dropdown-content">
+     <a href="classement/classement.html">Classement</a>
+	 <a href="demineur.html">Démineur</a>
+	 <a href="/game/game.html">Jeux de Tir</a>
+  </div>
+</div>
+
+<div class="conteneur"> 
+<div class="contenu">
+    <form id="quizz">
+			<div class="question">
+				<p>Question 1: Qu'est-ce qu'un séisme ?</p>
+				<label><input type="radio" name="q1" value="a"> Un orage violent</label><br>
+				<label><input type="radio" name="q1" value="b"> Une secousse de la surface terrestre</label><br>
+				<label><input type="radio" name="q1" value="c"> Une éruption volcanique</label><br>
+				<label><input type="radio" name="q1" value="d"> Une inondation soudaine</label>
+			</div>
+			<div class="question">
+				<p>Question 2: Quelle échelle est couramment utilisée pour mesurer la magnitude d'un séisme ?</p>
+				<label><input type="radio" name="q2" value="a"> Échelle de Beaufort</label><br>
+				<label><input type="radio" name="q2" value="b"> Échelle de Saffir-Simpson</label><br>
+				<label><input type="radio" name="q2" value="c"> Échelle de Richter</label><br>
+				<label><input type="radio" name="q2" value="d"> Échelle de Mercalli</label>
+			</div>
+			<div class="question">
+				<p>Question 3: Quel est le nom du point à la surface de la Terre au-dessus d'un séisme ?</p>
+				<label><input type="radio" name="q3" value="a"> Hypocentre</label><br>
+				<label><input type="radio" name="q3" value="b"> Épicentre</label><br>
+				<label><input type="radio" name="q3" value="c"> Foyer</label><br>
+				<label><input type="radio" name="q3" value="d"> Noyau</label>
+			</div>
+			<div class="question">
+				<p>Question 4: Quelle zone est la plus active en termes de séismes dans le monde ?</p>
+				<label><input type="radio" name="q4" value="a"> Le cercle polaire arctique</label><br>
+				<label><input type="radio" name="q4" value="b"> Le bassin amazonien</label><br>
+				<label><input type="radio" name="q4" value="c"> La ceinture de feu du Pacifique</label><br>
+				<label><input type="radio" name="q4" value="d"> La savane africaine</label>
+			</div>
+			<div class="question">
+				<p>Question 5: Quels instruments sont utilisés pour détecter et enregistrer les ondes sismiques ?</p>
+				<label><input type="radio" name="q5" value="a"> Thermomètres</label><br>
+				<label><input type="radio" name="q5" value="b"> Sismomètres</label><br>
+				<label><input type="radio" name="q5" value="c"> Baromètres</label><br>
+				<label><input type="radio" name="q5" value="d"> Anémomètres</label>
+			</div>
+			<div class="question">
+				<p>Question 6: Quelle est la différence entre la magnitude et l'intensité d'un séisme ?</p>
+				<label><input type="radio" name="q6" value="a"> La magnitude mesure l'énergie libérée, tandis que l'intensité mesure les effets ressentis</label><br>
+				<label><input type="radio" name="q6" value="b"> L'intensité mesure l'énergie libérée, tandis que la magnitude mesure les effets ressentis</label><br>
+				<label><input type="radio" name="q6" value="c"> Les deux mesurent l'énergie libérée</label><br>
+				<label><input type="radio" name="q6" value="d"> Les deux mesurent les effets ressentis</label>
+			</div>
+			<div class="question">
+				<p>Question 7: Quels types de mouvements des plaques tectoniques peuvent provoquer des séismes ?</p>
+				<label><input type="radio" name="q7" value="a"> Convergence, divergence et glissement transformant</label><br>
+				<label><input type="radio" name="q7" value="b"> Érosion et sédimentation</label><br>
+				<label><input type="radio" name="q7" value="c"> Rotation et révolution</label><br>
+				<label><input type="radio" name="q7" value="d"> Sublimation et déposition</label>
+			</div>
+			<div class="question">
+				<p>Question 8: Quels sont les effets potentiels d'un séisme sous-marin ?</p>
+				<label><input type="radio" name="q8" value="a"> Éruptions volcaniques</label><br>
+				<label><input type="radio" name="q8" value="b"> Tsunamis</label><br>
+				<label><input type="radio" name="q8" value="c"> Ouragans</label><br>
+				<label><input type="radio" name="q8" value="d"> Avalanches</label>
+			</div>
+        <button type="button" onclick="quizz()">Envoyer</button>
+    </form>
+	
+    <p class="resultat" id="resultat"></p>
+	</div>
+</div>
+    <script src="script.js"></script>
+</body>
+</hml>

@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	overflow: hidden; /* Empêche les barres de défilement de s'afficher */
+}
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+
+#video {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Assure que la vidéo couvre entièrement le conteneur sans déformer l'aspect ratio */
+    transform: translate(-50%, -50%); /* Centre la vidéo en utilisant une transformation de translation */
+}
+
+.contenu {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%); /*place le contenu et surtout les boutons au millieu*/
+}
+.contenu button {
+	margin: 5px;
+}
+
+#temps {
+	position: fixed;
+	z-index: 1; /*au dessus du fond*/
+	top: 20px;
+	right: 20px;
+	font-size: 30px;
+	color:white;
+}

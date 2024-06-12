@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Time to Quake ! est le site qui répétorie tout les tremblements du monde en temps réel et historique. Le site présente de la documentation des statistiques et un quizz !"/>
+  
+  <meta name="keywords" content="tremblement de terre, séisme, catastrophe naturelle, sismologie,  détection des séismes, mouvements tectoniques, plaques tectoniques, technologie sismique, magnitude, tremblement-du-monde.com, carte simsmologique">
+  <title>Noyau de la Terre</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" href="images/icone.png"/>
+</head>
+<body>
+
+<h1 class="title" id="tete"><a href="index.php">Time To Quake !</a></h1>
+
+<div class="dropdown">
+  <button class="dropbtn">Les Cartes</button>
+  <div class="dropdown-content">
+    <a href="carte-en-temps-réel.html">Carte en Temps Réel</a>
+    <a href="carte-historique.html">Carte Historique</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Documentation</button>
+  <div class="dropdown-content">
+    <a href="noyau-terre.html">Noyau de la Terre</a>
+    <a href="Les-tremblements-de-terre.html">Les Outils Technologiques</a>
+    <a href="Les-tremblements-de-terre-2.html">Les Tremblements de Terre</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Autres</button>
+  <div class="dropdown-content">
+    <a href="quizz.html">Quizz</a>
+	<a href="statistiques.html">Statistiques</a>
+	<a href="simu/Simu.html">Simulation</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Jeux</button>
+  <div class="dropdown-content">
+     <a href="classement/classement.html">Classement</a>
+	 <a href="demineur.html">Démineur</a>
+	 <a href="/game/game.html">Jeux de Tir</a>
+  </div>
+</div>
+
+
+<h1>Découverte du noyau de la Terre</h1>
+<p> Notre connaissance de la structure interne de notre planète est venue par étapes.
+Grâce à Newton et à sa loi de la gravitation universelle, on peut estimer la masse de la Terre à partir de la force gravitationnelle que la Terre exerce sur les corps à sa surface.
+Ceci nous renseigne sur le fait que la densité de la partie interne de la Terre est beaucoup plus élevée que la densité que nous observons à la surface.</p> 
+
+<h2> Que peuvent nous apprendre les séismes? </h2>
+
+<p> Les séismes génèrent plusieurs types d’ondes, dont des ondes de pression (ondes P) et des ondes de cisaillement (ondes S).
+ Les ondes de pression se propagent aussi bien dans les milieux solides que dans les milieux liquides,
+ alors que les ondes de cisaillement sont arrêtées par les milieux liquides.</p>
+ 
+<p>Au tout début du 20e siècle, Richard Dison Oldham en a déduit que la Terre avait un intérieur liquide sous le manteau terrestre.
+L’intérieur de la Terre est formé du manteau jusqu’à une profondeur d’environ 2 890 km et du noyau.
+En 1912, le simsologue Beno Gutenberg a découvert la frontière entre la croute et le manteau.
+Cette découvert est due à son observation d'une  <a href= "https://fr.wikipedia.org/wiki/Discontinuit%C3%A9_de_Gutenberg" target="_blank">Discontinuité</a> dans la vitesse de propagation des ondes simsiques et porte aujourd'hui son nom.
+C’est en 1936 qu’Inge Lehmann a découvert par observation de la <a href= "https://fr.wikipedia.org/wiki/Discontinuit%C3%A9_de_Lehmann" target="_blank">Discontinuité de Lehmann</a> que le noyau interne est solide</p>
+
+<h3>Une Terre uniforme </h3>
+<p>Si les ondes sismiques ont une vitesse constante, alors elles se propagent en ligne droite comme sur la figure ci-dessous.
+Le temps de parcours des ondes sismiques est alors proportionnel à la distance parcourue.</p>
+<img src= images/trajectoire-homogene-noyau.png>
+
+<p>Au moment où Inge Lehmann a commencé ses travaux, il était connu que le manteau terrestre, d’une épaisseur d’environ 2 890 km entourait un noyau.
+Pour expliquer la découverte d’Inge Lehmann, nous allons utiliser un modéle identique à celui présenté dans l'un de ses articles.
+Nous allons donc négliger la mince croûte terrestre.
+Que se passe-t-il donc quand les ondes pénètrent dans le noyau ? Elles sont <a href= "https://fr.wikipedia.org/wiki/R%C3%A9fraction" target="_blank">réfractées</a></p>
+<img src= images/Refraction.png>
+
+<h3>Les ondes sont réfractées dans un milieu non uniforme.</h3>
+<p>Voici donc la trajectoire des rayons. Que remarque-t-on? 
+Qu'il ya deux arcs dans lesquels on ne détecte aucune onde simsique !</p>
+<img src= images/trajectoire-noyau-externe.png>
+
+<h3>La découverte du noyau interne de la Terre</h3>
+<p>C’était le modèle connu de la Terre, et pourtant Inge Lehmann remarqua qu’on avait détecté des ondes sismiques dans la zone d'ombre…
+ Le modèle n’était donc pas bon. Regardons donc le modèle proposé par Inge Lehmann pour expliquer les observations.</p>
+<p>Dans ce modèle, elle a divisé le noyau en deux parties : un noyau externe comme ci-dessus,
+ et un noyau interne dans lequel les ondes se propagent plus rapidement que dans le noyau externe, et dont le rayon est d'environ 2/9 de celui de la Terre.
+ Pour connaître la trajectoire des ondes, il faut donc utiliser l’équation de la loi de réfraction de la lumière: <br/>
+ <img src= images/equation.svg> <br/>
+</p>
+<p>Mais que se passe-t-il si <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <msub>
+    <mi>&#x3B8;</mi>
+    <mn>1</mn>
+  </msub>
+</math> est assez proche de 1, c’est-à-dire si l’onde arrive presque tangentiellement sur le noyau interne?
+ Le côté droit de l’équation  peut dépasser 1 ! Il ne peut donc être égal à sin <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>&#x3B8;</mi>
+    <mn>2</mn>
+  </msub>
+  <mo>!</mo>
+</math> 
+Cela signifie que l’onde ne peut pénétrer dans le noyau interne… Que se passe- t-il alors?
+L’onde est réfléchie sur le noyau interne en suivant la loi de la réflexion,
+c’est à dire avec l’angle d’incidence égal à l’angle de réflexion</p>
+<img src= images/rayons.png> 
+<p>Voici donc comment se propagent les ondes sismiques dans le modèle d’Inge Lehmann.
+ Les rayons noirs sont réfractés dans le noyau extérieur et réfléchis sur le noyau intérieur </p> 
+ 
+ <p>Nous pouvons donc avoir la structure entière de la Terre : </p>
+ <img src= images/structure.png>
+
+
+<a href="#tete" class="fleche">↑</a> 
+<script src="script.js"></script>
+</body> 
+</html>
+
+

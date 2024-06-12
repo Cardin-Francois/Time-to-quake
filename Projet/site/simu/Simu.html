@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation de Séisme</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="/images/icone.png"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+<h1 class="title"><a href="../index.php">Time To Quake !</a></h1>
+
+<div class="dropdown">
+  <button class="dropbtn">Les Cartes</button>
+  <div class="dropdown-content">
+    <a href="../carte-en-temps-réel.html">Carte en Temps Réel</a>
+    <a href="../carte-historique.html">Carte Historique</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Documentation</button>
+  <div class="dropdown-content">
+    <a href="../noyau-terre.html">Noyau de la Terre</a>
+    <a href="../Les-tremblements-de-terre.html">Les Outils Technologiques</a>
+    <a href="../Les-tremblements-de-terre-2.html">Les Tremblements de Terre</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Autres</button>
+  <div class="dropdown-content">
+    <a href="../quizz.html">Quizz</a>
+	<a href="../statistiques.html">Statistiques</a>
+	<a href="Simu.html">Simulation</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Jeux</button>
+  <div class="dropdown-content">
+     <a href="/classement/classement.html">Classement</a>
+	 <a href="../demineur.html">Démineur</a>
+  </div>
+</div>
+
+    
+        <h1>Simulation de Séisme</h1>
+        
+        
+        <div class="control-panel">
+            <label for="magnitude">Choix de la Magnitude :</label>
+            <input type="range" id="magnitude" name="magnitude" min="1" max="10" step="0.1">
+            <span id="magnitude-value">5.0</span>
+        </div>
+
+       
+        <div class="control-panel">
+            <label for="soil">Types de Sols :</label>
+            <select id="soil" name="soil">
+				<option value="rock">Roche</option>
+				<option value="clay">Argile</option>
+                
+                
+            </select>
+        </div>
+
+        
+        <button id="simulate">Simuler</button>
+		<button id="stopSimulation">Arrêter la simulation</button>
+
+        
+        <div id="visualization" class="visualization">
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
